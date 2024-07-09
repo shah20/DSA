@@ -127,6 +127,45 @@ class BST {
 
         return result;
     }
+
+    DFSPreOrder() {
+        let result = [];
+
+        function traverse(currentNode) {
+            result.push(currentNode.value);
+            if(currentNode.left) traverse(currentNode.left);
+            if(currentNode.right) traverse(currentNode.right);
+        }
+        traverse(this.root);
+
+        return result;
+    }
+
+    DFSInOrder() {
+        let result = [];
+
+        function traverse(currentNode) {
+            if(currentNode.left) traverse(currentNode.left);
+            result.push(currentNode.value);
+            if(currentNode.right) traverse(currentNode.right);
+        }
+        traverse(this.root);
+
+        return result;
+    }
+
+    DFSPostOrder() {
+        let result = [];
+
+        function traverse(currentNode) {
+            if(currentNode.left) traverse(currentNode.left);
+            if(currentNode.right) traverse(currentNode.right);
+            result.push(currentNode.value);
+        }
+        traverse(this.root);
+
+        return result;
+    }
 }
 
 let myTree = new BST();
