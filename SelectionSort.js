@@ -17,3 +17,6 @@ function selectionSort(input) {
 
 const input = [4,2,7,10,11,44,6,5,1,3];
 console.log(bubbleSort(input));
+
+// At the end of the iteration smallest element would come at beginning
+// Swap is done only at the end of the iteration if needed

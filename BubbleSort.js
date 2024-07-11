@@ -28,3 +28,6 @@ function bubbleSort(arr) {
 
 const input = [4,2,6,5,1,3];
 console.log(bubbleSort(input));
+
+// At the end of each iteration maximum element would come at last
+// Swap is done every time when the element is greater than the next element
