@@ -2,7 +2,7 @@ function insertionSort(input) {
     let temp;
     for(let i=1; i<input.length; i++){
         temp = input[i];
-        for(var j=i-1; input[j] > temp; j--) {
+        for(var j=i-1; input[j] > temp && j > -1; j--) {
             input[j+1] = input[j];
         }
         input[j+1] = temp;
