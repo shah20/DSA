@@ -15,5 +15,16 @@ function fib(n) {
     return memo[n];
 }
 
+function fibBottomUp(n) {
+    let fibArray = [];
+    fibArray[0] = 0;
+    fibArray[1] = 1;
+
+    for(let index = 2; index <= n; index++) {
+        fibArray[index] = fibArray[index - 1] + fibArray[index - 2];
+    }
+    return fibArray[n];
+}
+
 console.log(fib(40));
 console.log(counter);
