@@ -1,7 +1,8 @@
 let memo = [];
+let counter = 0;
 
 function fib(n) {
-
+    counter++;
     if(memo[n] !== undefined) {
         return memo[n];
     }
@@ -14,4 +15,5 @@ function fib(n) {
     return memo[n];
 }
 
-fib(40);
+console.log(fib(40));
+console.log(counter);
